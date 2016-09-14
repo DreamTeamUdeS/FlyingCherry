@@ -51,7 +51,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c36955a9a957548e3b17eb8d9ed26e99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CellWidth: 1
-  CellDepth: 1
-  MaxWidth: 0
-  MaxDepth: 0
+  Spacing: 1

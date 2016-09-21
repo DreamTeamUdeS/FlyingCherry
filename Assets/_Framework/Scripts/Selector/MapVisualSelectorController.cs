@@ -10,11 +10,8 @@ public class MapVisualSelectorController : MonoBehaviour {
 
     public MapVisualSelector m_cursorSelector;
 
-    // Use this for initialization
-    void Start () {
-	
-	}
-	
+    const float HEIGHT_OFFSET = 0.05f;
+    
 	// Update is called once per frame
 	void Update () {
         Vector3 position;
@@ -25,12 +22,12 @@ public class MapVisualSelectorController : MonoBehaviour {
 
             position = m_gridSettings.SnapWorldPositionToGrid(position);
             
-            position = new Vector3(position.x + 0.5f, 0.05f, position.z - 0.5f);
+            position = new Vector3(position.x, HEIGHT_OFFSET, position.z);
 
             m_cursorSelector.setPosition(position);
 
             m_cursorSelector.setVisible(true);
-
+            
             Debug.LogWarning("Position : " + position.ToString());
         }
         catch (PositionNotFound e)

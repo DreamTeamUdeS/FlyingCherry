@@ -19,9 +19,9 @@ public class GridSettings : MonoBehaviour {
 	public Vector3 SnapWorldPositionToGrid(Vector3 worldPos) {
 		Vector3 gridPosition = new Vector3 ();
 
-		gridPosition.x = (int)(worldPos.x / Spacing);
+		gridPosition.x = Mathf.Floor(worldPos.x / Spacing);
 		gridPosition.y = worldPos.y;
-		gridPosition.z = (int)(worldPos.z / Spacing);
+		gridPosition.z = Mathf.Ceil(worldPos.z / Spacing);
 
 		return gridPosition;
 	}
